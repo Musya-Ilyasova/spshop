@@ -1,0 +1,93 @@
+{% from "../../components/icon/icon.nunj" import icon %}
+{% from "../../components/image/image.nunj" import image %}
+
+<aside class="basket">
+  <div class="basket__products">
+    <h2 class="basket__title">My basket</h2>
+    <ul class="basket__list">
+      <li class="basket__item">
+        <div class="product">
+          {{ image({
+            srcset: 'assets/images/product-1@2x.png',
+            src: 'assets/images/product-1.png',
+            alt: 'Amet minim mollit non deserunt ullamco est sit'
+          }) }}
+          <div class="product__content">
+            <h3 class="product__name">Amet minim mollit non deserunt ullamco est sit</h3>
+            <div class="product__price">
+              <button class="product__btn product__btn_dec">
+                {{ icon({
+                  iconName: 'dec',
+                  className: 'icon icon-dec',
+                  attributes: 'viewBox="0 0 21 20" style="width: 21px; height: 20px; fill: none;"'
+                }) }}
+              </button><span class="product__count">1</span>
+              <button class="product__btn product__btn_inc">
+                {{ icon({
+                  iconName: 'inc',
+                  className: 'icon icon-inc',
+                  attributes: 'viewBox="0 0 21 20" style="width: 21px; height: 20px; fill: none;"'
+                }) }}
+              </button><span class="product__sum" id="productSum">$ 525</span>
+            </div>
+          </div>
+          <button class="product__close">close
+              {{ icon({
+                iconName: 'close',
+                className: 'icon icon-close',
+                attributes: 'viewBox="0 0 19 18" style="width: 19px; height: 18px; fill: none;"'
+              }) }}
+          </button>
+        </div>
+      </li>
+      <li class="basket__item">
+        <div class="product">
+          {{ image({
+            srcset: 'assets/images/product-2@2x.png',
+            src: 'assets/images/product-2.png',
+            alt: 'Amet minim mollit non'
+          }) }}
+          <div class="product__content">
+            <h3 class="product__name">Amet minim mollit non</h3>
+            <div class="product__price">
+              <button class="product__btn product__btn_dec">
+                {{ icon({
+                  iconName: 'dec',
+                  className: 'icon icon-dec',
+                  attributes: 'viewBox="0 0 21 20" style="width: 21px; height: 20px; fill: none;"'
+                }) }}
+              </button><span class="product__count">1</span>
+              <button class="product__btn product__btn_inc">
+                {{ icon({
+                  iconName: 'inc',
+                  className: 'icon icon-inc',
+                  attributes: 'viewBox="0 0 21 20" style="width: 21px; height: 20px; fill: none;"'
+                }) }}
+              </button><span class="product__sum" id="productSum">$ 525</span>
+            </div>
+          </div>
+          <button class="product__close">close
+              {{ icon({
+                iconName: 'close',
+                className: 'icon icon-close',
+                attributes: 'viewBox="0 0 19 18" style="width: 19px; height: 18px; fill: none;"'
+              }) }}
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <form class="promocode basket__promocode" action="">
+    <h2 class="promocode__title">Promo code</h2>
+    <div class="promocode__wrapper">
+      <input class="input promocode__input" placeholder="Placeholder Text">
+    </div>
+    <button class="btn btn_primary promocode__btn" type="submit">Apply</button>
+  </form>
+  <ul class="price-list">
+    <li class="price-list__item"><span class="price-list__name">Subtotal</span><span class="price-list__count" id="subtotal">$1050</span></li>
+    <li class="price-list__item"><span class="price-list__name">Tax</span><span class="price-list__count" id="tax">$100</span></li>
+    <li class="price-list__item"><span class="price-list__name">Shipping</span><span class="price-list__count" id="shipping">$150</span></li>
+    <li class="price-list__item price-list__item_bold"><span class="price-list__name">Total</span><span class="price-list__count" id="total">$1300</span></li>
+  </ul>
+</aside>

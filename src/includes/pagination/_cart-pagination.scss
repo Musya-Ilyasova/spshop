@@ -1,0 +1,55 @@
+.cart-pagination {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  margin-top: 87px;
+  counter-reset: item;
+  &:before {
+    content: "";
+    width: calc(100% - 50px);
+    height: 1px;
+    position: absolute;
+    top: -17px;
+    left: 25px;
+    background: linear-gradient(to right, $main 0% 67%, $gray-light3 67% 100%);
+  }
+
+  &__item {
+    font-size: 14px;
+    line-height: 1.14;
+    position: relative;
+    counter-increment: item;
+    &:before {
+      content: counter(item);
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -27px;
+      margin: 0 auto;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      line-height: 18px;
+      font-size: 10px;
+      font-weight: 500;
+      text-align: center;
+      color: $gray-light3;
+      background: $white;
+      border: 1px solid $gray-light3;
+    }
+    &_passed {
+      &:before {
+        color: $white;
+        background: $main;
+        border: 1px solid $main;
+      }
+    }
+    &_progress {
+      &:before {
+        color: $main;
+        border: 1px solid $main;
+      }
+    }
+  }
+}

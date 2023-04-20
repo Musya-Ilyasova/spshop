@@ -1,0 +1,7 @@
+{% macro image(props) %}
+	<img
+		{% if props.className %}class="{{ props.className }}"{% endif %}
+		{% if props.srcset %} srcset="{{ props.srcset }} 2x"{% endif %}
+		src="{{ props.src }}"
+		alt="{{ props.alt }}" />
+{% endmacro %}

@@ -1,0 +1,16 @@
+.wrapper {
+	position: relative;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1141px;
+  padding: 0 10px;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  @include mq('768') {
+    padding: 0 50px;
+  }
+}

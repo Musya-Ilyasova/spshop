@@ -1,0 +1,39 @@
+{% from "../../components/icon/icon.nunj" import icon %}
+
+<div class="header">
+	<div class="container header__container">
+		<a class="logo" href="">
+			{{ icon({
+				iconName: 'logo',
+				className: 'icon icon-logo',
+				attributes: 'viewBox="0 0 89 32" style="width: 89px; height: 32px; fill: none;"'
+			}) }}
+		</a>
+		<div class="search-form header__search-form">
+			<button class="search-form__btn">
+				{{ icon({
+					iconName: 'search',
+					className: 'icon icon-search',
+					attributes: 'viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: none;"'
+				}) }}
+			</button>
+		</div>
+		<button class="cart header__cart">
+				{{ icon({
+					iconName: 'cart',
+					className: 'icon icon-cart',
+					attributes: 'viewBox="0 0 24 21" style="width: 24px; height: 21px; fill: none;"'
+				}) }}
+			<span class="cart__count">2</span>
+		</button>
+		<div class="menu header__menu">
+			<button class="menu-burger">
+				{{ icon({
+					iconName: 'burger',
+					className: 'icon icon-burger',
+					attributes: 'viewBox="0 0 29 22" style="width: 29px; height: 22px; fill: none;"'
+				}) }}
+			</button>
+		</div>
+	</div>
+</div>

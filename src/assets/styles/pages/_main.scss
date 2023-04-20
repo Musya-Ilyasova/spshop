@@ -1,0 +1,100 @@
+.index {
+  @include min-screen("1024px") {
+    display: grid;
+    grid-template-columns: 1fr 410px;
+    grid-template-rows: auto;
+    height: calc(100vh - 81px);
+  }
+}
+
+.billing-info {
+  padding-top: 60px;
+  @include min-screen("1600px") {
+    max-width: 660px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    @include min-screen("768px") {
+      padding-left: 30px;
+    }
+  }
+}
+
+.pay-options {
+  padding-top: 22px;
+  display: flex;
+  align-items: center;
+  @include min-screen("768px") {
+    padding-left: 30px;
+  }
+  &__item {
+    margin-right: 22px;
+    @include min-screen("768px") {
+      margin-right: 82px;
+    }
+  }
+}
+
+.pay-card {
+  &__details {
+    padding: 23px 0 16px;
+    max-width: 550px;
+    @include min-screen("768px") {
+      border: 1px solid $gray-light2;
+      box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.19);
+      border-radius: 5px;
+      padding: 20px 30px;
+      margin-top: 44px;
+      margin-bottom: 40px;
+    }
+  }
+  &__input {
+    margin-bottom: 20px;
+  }
+  &__group {
+    width: 50%;
+    display: flex;
+    @include min-screen("768px") {
+      width: 47.5%;
+    }
+  }
+  &__wrapper {
+    margin-left: 5px;
+    @include min-screen("768px") {
+      margin-left: 30px;
+    }
+  }
+  &__number {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 5px;
+    @include min-screen("768px") {
+      grid-gap: 30px;
+    }
+  }
+  &__checkbox {
+    margin-bottom: 12px;
+    @include min-screen("768px") {
+      margin-left: 30px;
+    }
+  }
+  &__btn-panel {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 45px;
+    @include min-screen("768px") {
+      margin: 45px 30px 0;
+    }
+  }
+  &__question {
+    background-color: $gray-light3;
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+    text-align: center;
+    line-height: 13px;
+    font-size: 10px;
+  }
+}

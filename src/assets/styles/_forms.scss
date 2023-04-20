@@ -1,0 +1,108 @@
+.input {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  font-weight: 400;
+  vertical-align: middle;
+  padding: 0 10px;
+  background: $gray-light;
+  border: none;
+  border-radius: 3px;
+  &:focus {
+    outline: 2px solid $main;
+  }
+  &::placeholder {
+    color: $gray-dark;
+  }
+  &_hidden {
+    opacity: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+}
+
+.label-input {
+  line-height: 24px;
+  font-size: 12px;
+  font-weight: 500;
+  color: $gray-dark2;
+}
+
+
+.checkbox {
+  display: block;
+  cursor: pointer;
+  input {
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
+    &:checked + .checkbox__text {
+      &:after {
+        background-color: $main;
+      }
+    }
+    &:not(:checked):focus + .checkbox__text, &:not(:checked):hover + .checkbox__text {
+      &:before {
+        border: 1px solid $main;
+      }
+    }
+  }
+  .checkbox__text {
+    display: inline-block;
+    position: relative;
+    padding-left: 26px;
+    color: #8C8C8C;
+    line-height: 20px;
+    &:before {
+      content: "";
+      border: 1px solid $gray-light2;
+      width: 18px;
+      height: 18px;
+      box-sizing: border-box;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: border 0.2s ease-in-out;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      box-sizing: border-box;
+      left: 5px;
+      top: 5px;
+      background-color: transparent;
+      transition: background 0.2s ease-in-out;
+    }
+    &_hidden {
+      font-size: 0;
+    }
+    .icon-paypal {
+      width: 85px;
+      height: 23px;
+    }
+  }
+  .checkbox__link {
+    color: $black;
+    transition: color 0.2s ease-in-out;
+    &:hover {
+      color: $main;
+    }
+  }
+  &_round {
+    .checkbox__text {
+      display: flex;
+      align-items: baseline;
+      line-height: 1.14;
+      &:before, &:after {
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+

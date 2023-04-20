@@ -1,0 +1,95 @@
+.basket {
+  display: none;
+  border-left: 1px solid $gray-light2;
+  padding-top: 40px;
+  @include min-screen("1024px") {
+    display: block;
+  }
+  &__products {
+    padding: 0 40px;
+  }
+  &__list {
+    padding: 30px 0;
+  }
+  &__item {
+    margin-bottom: 40px;
+  }
+  &__promocode {
+    border-top: 1px solid $gray-light2;
+    border-bottom: 1px solid $gray-light2;
+  }
+}
+
+.product {
+  display: flex;
+  &__img {
+    width: 100px;
+    height: 100px;
+  }
+  &__content {
+    margin-left: 11px;
+  }
+  &__name {
+    height: 36px;
+    overflow: hidden;
+    font-weight: 400;
+    max-width: 170px;
+  }
+  &__price {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+  }
+  &__btn {
+    width: 20px;
+    height: 20px;
+  }
+  &__count {
+    font-size: 14px;
+    display: inline-block;
+    margin: 0 17px;
+    line-height: 20px;
+  }
+  &__close {
+    font-size: 0;
+    width: 18px;
+    height: 18px;
+    margin-left: auto;
+
+  }
+  &__sum {
+    margin-left: 25px;
+    line-height: 20px;
+  }
+}
+
+.promocode {
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  &__title {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  &__wrapper {
+    width: 225px;
+  }
+  &__btn {
+    width: 95px;
+    margin-left: auto;
+  }
+}
+
+.price-list {
+  padding: 40px;
+  font-size: 14px;
+  &__item {
+    line-height: 2.4;
+    display: flex;
+    justify-content: space-between;
+    &_bold {
+      font-weight: 700;
+      font-size: 16px;
+    }
+  }
+}
