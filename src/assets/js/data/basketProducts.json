@@ -1,0 +1,18 @@
+{
+	"basketProducts": [
+		{
+			"name": "Amet minim mollit non deserunt ullamco est sit",
+			"price": "525",
+      "imgSrc": "assets/images/product-1.png",
+      "imgSrcset": "assets/images/product-1@2x.png",
+      "imgAlt": "Amet minim mollit non deserunt ullamco est sit"
+		},
+		{
+			"name": "Amet minim mollit non",
+			"price": "525",
+      "imgSrc": "assets/images/product-2.png",
+      "imgSrcset": "assets/images/product-2@2x.png",
+      "imgAlt": "Amet minim mollit non"
+		}
+	]
+}

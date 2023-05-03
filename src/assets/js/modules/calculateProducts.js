@@ -4,7 +4,7 @@ const calculateProducts = (state) => {
   let sum = document.querySelector('.product__sum');
   let count = document.querySelector('.product__count');
 
-  const response = async () => await fetch('../global-data.json');
+  const response = async () => await fetch('./basketProducts.json');
   response.then(data => console.log(data));
   // console.log(count);
   // state.count = Number(count.textContent.trim());

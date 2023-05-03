@@ -6,6 +6,7 @@
   &__container {
     display: flex;
     align-items: baseline;
+    max-width: 100%;
 		@include min-screen("720px") {
       padding: 0 30px;
     }
