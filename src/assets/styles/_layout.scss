@@ -10,7 +10,10 @@
   margin: 0 auto;
   box-sizing: border-box;
 
-  @include mq('768') {
+  @include min-screen("768px") {
     padding: 0 50px;
+  }
+  @include min-screen("1600px") {
+    padding: 0 20px;
   }
 }

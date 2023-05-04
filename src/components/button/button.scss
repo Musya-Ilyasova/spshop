@@ -50,7 +50,6 @@
   &_primary {
     background: $main;
     color: $white;
-    // transition: background 0.2s ease-in-out;
     border: 1px solid $main;
     width: 125px;
     &:focus, &:hover {
@@ -62,7 +61,6 @@
     background: transparent;
     color: $black;
     border: 1px solid $gray-light2;
-    // transition: border 0.2s ease-in-out;
     width: 91px;
     &:focus, &:hover {
       border: 1px solid $main;

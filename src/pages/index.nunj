@@ -4,6 +4,7 @@
 
 {% from "../components/button/button.nunj" import button %}
 {% from "../components/icon/icon.nunj" import icon %}
+{% from "../components/image/image.nunj" import image %}
 
 {# Пример расширения существующего блока #}
 {# Например можно использовать для добавления уникальных тайтлов для каждой страницы #}
@@ -21,7 +22,7 @@
           <div class="pay-options">
             <div class="pay-options__item">
               <label class="checkbox checkbox_round">
-                <input type="radio" name="payOptions"><span class="checkbox__text">Pay with Credit Card</span>
+                <input type="radio" name="payOptions" checked><span class="checkbox__text">Pay with Credit Card</span>
               </label>
             </div>
             <div class="pay-options__item">
@@ -66,11 +67,19 @@
                   <input type="checkbox" name="save" checked><span class="checkbox__text">Save information of this credit card</span>
                 </label>
                 <label class="checkbox pay-card__checkbox">
-                  <input type="checkbox" name="save"><span class="checkbox__text">I accept the&nbsp;<a class="checkbox__link" href="#">terms and comditions</a>&nbsp;and the&nbsp;<a class="checkbox__link" href="#">Privacy Policies</a></span>
+                  <input type="checkbox" name="save"><span class="checkbox__text">I accept the <a class="checkbox__link" href="#">terms and comditions</a> and the <a class="checkbox__link" href="#">Privacy Policies</a></span>
                 </label>
                 <div class="pay-card__btn-panel">
-                  <button class="btn btn_secondary" type="button">Back</button>
-                  <button class="btn btn_primary" type="submit">Check Out</button>
+                  {{ button({
+                    className: 'btn_secondary',
+                    children: 'Back',
+                    type: 'button'
+                  }) }}
+                  {{ button({
+                    className: 'btn_primary',
+                    children: 'Check Out',
+                    type: 'submit'
+                  }) }}
                 </div>
               </form>
             </div>
@@ -78,66 +87,20 @@
           </div>
         </section>
       </div>
-      {% include '../includes/aside/aside.nunj' %}
+      <aside class="basket">
+        <div class="basket__products">
+          <h2 class="basket__title">My basket</h2>
+          <ul class="basket__list">
+            {% for item in basketProducts %}
+              <li class="basket__item">
+                {% include '../includes/product/product.nunj' %}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% include '../includes/promocode/promocode.nunj' %}
+        {% include '../includes/priceList/priceList.nunj' %}
+      </aside>
 
   </main>
-
-	<div class="container">
-
-		<div style="padding:20px 0;">
-			{{ button({
-				className: '',
-				children: 'Buy something',
-				chevronRight: true
-			}) }}
-		</div>
-
-		<div style="padding:20px 0;">
-
-			<h2 style="margin-bottom: 15px;">Пример использования циклов и функции range():</h2>
-
-			<div class="row">
-				{% for i in range(1, 13)  %}
-					<span>{{ i }}</span>
-				{% endfor %}
-			</div>
-
-		</div>
-
-		<div style="padding:20px 0;">
-
-			<h2 style="margin-bottom: 15px;">Пример с переменными:</h2>
-
-			{% for item in someData %}
-				<div style="margin-bottom: 15px;">
-					<h3>{{ item.title }}</h3>
-					<p>{{ item.text }}</p>
-				</div>
-			{% endfor %}
-
-		</div>
-
-		{# Пример с функциями #}
-		<p style="margin-bottom: 20px;">{{ addAwesome('Это текст для теста функций') }}</p>
-
-		{% if DEVELOP %}
-			<div class="debug" style="margin-bottom: 20px;">
-				<h2 style="margin-bottom: 15px;">Debug:</h2>
-				<p>Эта информация будет выводиться только при DEVELOP = true.</p>
-			</div>
-		{% endif %}
-
-		<div style="padding:20px 0;">
-
-			<h2 style="margin-bottom: 15px;">Пример использования SVG-спрайта</h2>
-
-			{{ icon({
-				iconName: 'chat',
-				className: 'icon',
-				attributes: 'viewBox="0 0 20 20" style="width: 40px; height: 40px; fill: #212121;"'
-			}) }}
-
-		</div>
-
-	</div>
 {% endblock %}

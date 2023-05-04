@@ -1,5 +1,8 @@
 <ul class="cart-pagination">
 	{% for item in cartPagination %}
-		<li class="cart-pagination__item{% if item.class !== "" %} cart-pagination__item_{{item.class}}{% endif %}">{{ item.title }}</li>
+		<li class="cart-pagination__item{% if item.class !== "" %} cart-pagination__item_{{item.class}}{% endif %}">
+			<span class="cart-pagination__count"></span>
+			<span class="cart-pagination__name">{{ item.title }}</span>
+		</li>
 	{% endfor %}
 </ul>

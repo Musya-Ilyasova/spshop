@@ -53,8 +53,9 @@
     display: inline-block;
     position: relative;
     padding-left: 26px;
+    padding-right: 40px;
     color: #8C8C8C;
-    line-height: 20px;
+    line-height: 17px;
     &:before {
       content: "";
       border: 1px solid $gray-light2;
@@ -83,6 +84,7 @@
     .icon-paypal {
       width: 85px;
       height: 23px;
+      margin-left: 5px;
     }
   }
   .checkbox__link {
@@ -97,6 +99,8 @@
       display: flex;
       align-items: baseline;
       line-height: 1.14;
+      padding-left: 27px;
+      padding-right: 0;
       &:before, &:after {
         border-radius: 50%;
         top: 50%;

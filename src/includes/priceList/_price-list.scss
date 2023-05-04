@@ -1,0 +1,13 @@
+.price-list {
+  padding: 41px 55px 40px 40px;
+  font-size: 14px;
+  &__item {
+    line-height: 33px;
+    display: flex;
+    justify-content: space-between;
+    &_bold {
+      font-weight: 700;
+      font-size: 18px;
+    }
+  }
+}

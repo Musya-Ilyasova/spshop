@@ -1,0 +1,16 @@
+.promocode {
+  padding: 41px 40px 39px 39px;;
+  display: flex;
+  flex-wrap: wrap;
+  &__title {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  &__wrapper {
+    width: 225px;
+  }
+  &__btn {
+    width: 95px;
+    margin-left: auto;
+  }
+}

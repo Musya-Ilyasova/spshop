@@ -21,8 +21,8 @@ class ProjectApp {
 		this.modules = {};
 		document.addEventListener('DOMContentLoaded', () => {
 			document.documentElement.classList.remove('_loading');
-			let calcState = {};
-			// calculateProducts(calcState);
+			const calcState = [];
+			calculateProducts(calcState);
 		});
 	}
 }

@@ -2,10 +2,11 @@
   height: 81px;
   border-bottom: 1px solid #CFCFCF;
   display: flex;
-  align-items: center;
+  padding-top: 26px;
+  padding-bottom: 22px;
   &__container {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     max-width: 100%;
 		@include min-screen("720px") {
       padding: 0 30px;
@@ -13,12 +14,15 @@
   }
   &__search-form {
     margin-left: auto;
+    margin-top: 4px;
   }
   &__cart {
     margin-left: 26px;
+    margin-bottom: 4px;
   }
   &__menu {
-    margin-left: 32px;
+    margin-left: 26px;
+    margin-top: 7px;
   }
 
 }

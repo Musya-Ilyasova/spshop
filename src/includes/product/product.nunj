@@ -1,0 +1,37 @@
+{% from "../../components/icon/icon.nunj" import icon %}
+{% from "../../components/image/image.nunj" import image %}
+
+
+<div class="product">
+  {{ image({
+    srcset: item.imgSrcset ,
+    src: item.imgSrc ,
+    alt: item.imgAlt
+  }) }}
+  <div class="product__content">
+    <h3 class="product__name">{{item.name}}</h3>
+    <div class="product__price">
+      <button class="product__btn product__btn_dec">
+        {{ icon({
+          iconName: 'dec',
+          className: 'icon icon-dec',
+          attributes: 'viewBox="0 0 21 20" style="width: 21px; height: 20px; fill: none;"'
+        }) }}
+      </button><span class="product__count">1</span>
+      <button class="product__btn product__btn_inc">
+        {{ icon({
+          iconName: 'inc',
+          className: 'icon icon-inc',
+          attributes: 'viewBox="0 0 21 20" style="width: 21px; height: 20px; fill: none;"'
+        }) }}
+      </button><span class="product__sum" id="productSum">$ {{item.price}}</span>
+    </div>
+  </div>
+  <button class="product__close">close
+    {{ icon({
+      iconName: 'close',
+      className: 'icon icon-close',
+      attributes: 'viewBox="0 0 19 18" style="width: 19px; height: 18px; fill: none;"'
+    }) }}
+  </button>
+</div>

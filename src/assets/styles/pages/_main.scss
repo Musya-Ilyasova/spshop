@@ -10,7 +10,7 @@
 .billing-info {
   padding-top: 60px;
   @include min-screen("1600px") {
-    max-width: 660px;
+    max-width: 690px;
     margin: 0 auto;
   }
 
@@ -22,30 +22,40 @@
 }
 
 .pay-options {
-  padding-top: 22px;
+  padding-top: 20px;
   display: flex;
   align-items: center;
   @include min-screen("768px") {
     padding-left: 30px;
+    padding-top: 41px;
   }
   &__item {
-    margin-right: 22px;
-    @include min-screen("768px") {
-      margin-right: 82px;
+    &:not(:last-child) {
+      margin-right: 22px;
+      @include min-screen("768px") {
+        margin-right: 82px;
+      }
     }
+  }
+}
+
+.pay-content {
+  padding-bottom: 280px;
+  @include min-screen("768px") {
+    padding-bottom: 190px;
   }
 }
 
 .pay-card {
   &__details {
-    padding: 23px 0 16px;
+    padding: 20px 0 16px;
     max-width: 550px;
     @include min-screen("768px") {
       border: 1px solid $gray-light2;
       box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.19);
       border-radius: 5px;
-      padding: 20px 30px;
-      margin-top: 44px;
+      padding: 20px 30px 26px;
+      margin-top: 38px;
       margin-bottom: 40px;
     }
   }
@@ -75,7 +85,7 @@
     }
   }
   &__checkbox {
-    margin-bottom: 12px;
+    margin-bottom: 13px;
     @include min-screen("768px") {
       margin-left: 30px;
     }
@@ -83,9 +93,9 @@
   &__btn-panel {
     display: flex;
     justify-content: space-between;
-    margin-top: 45px;
+    margin-top: 44px;
     @include min-screen("768px") {
-      margin: 45px 30px 0;
+      margin: 40px 30px 0;
     }
   }
   &__question {
@@ -96,5 +106,29 @@
     text-align: center;
     line-height: 13px;
     font-size: 10px;
+    margin-left: 2px;
+    vertical-align: middle;
+  }
+}
+
+.basket {
+  display: none;
+  border-left: 1px solid $gray-light2;
+  padding-top: 40px;
+  @include min-screen("1024px") {
+    display: block;
+  }
+  &__products {
+    padding: 0 40px 0 39px;
+  }
+  &__list {
+    padding: 32px 0 0;
+  }
+  &__item {
+    margin-bottom: 39px;
+  }
+  &__promocode {
+    border-top: 1px solid $gray-light2;
+    border-bottom: 1px solid $gray-light2;
   }
 }
